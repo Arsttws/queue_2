@@ -1,0 +1,106 @@
+@font-face {
+    font-family: "Geologica";
+    src: url(fonts/Geologica/Geologica-Bold.ttf);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url(fonts/Montserrat/Montserrat-Medium.ttf);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+.wrapper{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+.container{
+    display: flex;
+}
+.video{
+    margin-right: 0;
+    margin-left: auto;
+}
+.click-btn p{
+    padding: 10px 30px;
+    border: 1px solid #000;
+    background-color: #2fcac2;
+}
+.table{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 600px;
+    width: 100%;    
+}
+.cabinet .headline p, .ticket-headline p{
+    font-family: Geologica;
+    font-size: 40px;
+}
+.cabinet-number p, .ticket-number p{
+    font-family: Montserrat;
+    font-size: 34px;
+    color: #002b63;
+}
+.added p{
+    font-size: 28px;
+    font-family: Montserrat;
+}
+.client-message.active{
+    display: flex;
+}
+.client-message p{
+    font-family: Montserrat;
+    font-size: 28px;
+}
+.client-message span{
+    color: #7c1919;
+    font-size: 38px;
+}
+.admin-window{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+.admin-wrapper{
+    display: grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1280px;
+    width: 100%; 
+}
+.give-ticket div p, .next-person div p{
+    font-family: Montserrat;
+    font-size: 26px;
+    margin: 0;
+}
+.give-ticket div, .next-person div{
+    background-color: #64e7b171;
+    padding: 25px 15px;
+    margin: 10px 0;
+}
+.give-ticket div:hover, .next-person div:hover{
+    background-color: #48d49a91;
+    border: 1px solid #5f5f5f91;
+    padding: 24px 14px;
+    cursor: pointer;
+}
+.give-ticket{
+    margin-right: 20px;
+}
+.next-person{
+    margin-left: 20px;
+}
+.get, .send{
+    background-color: #fff !important;
+}
+.get p, .send p{
+    font-family: Geologica !important;
+    font-size: 40px !important;
+}
+.get, .send:hover{
+    border: none !important;
+    cursor: auto !important;
+}
