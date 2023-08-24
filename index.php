@@ -1,7 +1,7 @@
 <?php
 
 include "database.php";
-var_dump($db->query("SELECT max(`id`) AS `id` FROM `cab1` WHERE 1")->fetch());
+// var_dump($db->query("SELECT max(`id`) AS `id` FROM `cab1` WHERE 1")->fetch());
 
 // "INSERT INTO cab1 (id) VALUES (NULL)";
 
@@ -56,9 +56,7 @@ var_dump($db->query("SELECT max(`id`) AS `id` FROM `cab1` WHERE 1")->fetch());
                             <p>Талон</p>
                         </div>
                         <div class="ticket-number">
-                            <p class="number-one" data-attr="<?php $result = mysqli_query($link, "SELECT * FROM cab1 ORDER BY id DESC LIMIT 0,1;");
-$id = mysqli_fetch_assoc($result);
-echo $id['id']; ?>">-</p>
+                            <p class="number-one">-</p>
                             <p class="number-two">-</p>
                             <p class="number-three">-</p>
                             <p class="number-four">-</p>
@@ -88,13 +86,13 @@ echo $id['id']; ?>">-</p>
                 <div class="cab" data-cab="2">
                     <p>Кабинет 102: Врач</p>
                 </div>
-                <div class="cab">
+                <div class="cab" data-cab="3">
                     <p>Кабинет 103: Экономист</p>
                 </div>
-                <div class="cab">
+                <div class="cab" data-cab="4">
                     <p>Кабинет 104: Бухгалтер</p>
                 </div>
-                <div class="cab">
+                <div class="cab" data-cab="5">
                     <p>Кабинет 105: Другое</p>
                 </div>
             </div>
@@ -102,27 +100,24 @@ echo $id['id']; ?>">-</p>
                 <div class="send">
                     <p>Отправить</p>
                 </div>
-                <div class="person-1">
+                <div class="person" data-person="1">
                     <p>Отправить в кабинет 101</p>
                 </div>
-                <div class="person-2">
+                <div class="person" data-person="2">
                     <p>Отправить в кабинет 102</p>
                 </div>
-                <div class="person-3">
+                <div class="person" data-person="3">
                     <p>Отправить в кабинет 103</p>
                 </div>
-                <div class="person-4">
+                <div class="person" data-person="4">
                     <p>Отправить в кабинет 104</p>
                 </div>
-                <div class="person-5">
+                <div class="person" data-person="5">
                     <p>Отправить в кабинет 105</p>
                 </div>
             </div>
             <div class="added">
-                <p>Клиент <span class="added-A" data-attr="
-                    <?php $result = mysqli_query($link, "SELECT * FROM cab1 ORDER BY id DESC LIMIT 0,1;");
-                        $id = mysqli_fetch_assoc($result);
-                        echo $id['id']; ?>">
+                <p>Клиент <span class="added-A">
                     </span> добавлен в очередь</p>
                     <p>Клиент <span class="added-B">-</span> добавлен в очередь</p>
             </div>

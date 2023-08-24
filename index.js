@@ -231,9 +231,20 @@ const giveTickets = document.querySelector('.give-ticket');
 giveTickets.addEventListener('click', (e) => {
     if (e.target.closest('.cab')) {
         const cab = e.target.closest('.cab');
-        // console.log(cab.dataset.cab)
+        console.log(cab.dataset.cab)
         ajax(`add-db.php?cab=${cab.dataset.cab}`, (response) => {
             const ticket = response.responseText;
+        });
+    }
+});
+
+const sendClient = document.querySelector('.next-person');
+sendClient.addEventListener('click', (e) => {
+    if (e.target.closest('.person')) {
+        const person = e.target.closest('.person');
+        console.log(person.dataset.person)
+        ajax(`del-db.php?person=${person.dataset.person}`, (response) => {
+            const delPerson = response.responseText;
         });
     }
 });
